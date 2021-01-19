@@ -121,16 +121,18 @@ footer {
 
     &:hover .card-img-top {
         transform: scale(1.3);
-    
+
     }
 }
 
 .card-img-top {
     transition: all 2s ease-in-out;
 }
+
 .card-title {
     font-weight: bold;
 }
+
 .card-text {
     margin: 2px;
     font-size: 15px;
@@ -139,6 +141,7 @@ footer {
 .colores-disponibles {
     font-size: 12px;
 }
+
 .card__comprar {
     display: flex;
     flex-direction: row;
@@ -147,9 +150,9 @@ footer {
     align-items: center;
 
 }
-.precio-producto {
 
-}
+
+
 .btn {
     background-color: #d8581d;
     border: #d8581d;
@@ -159,12 +162,43 @@ footer {
     height: 40px;
     font-size: 25px;
     color: #ffffff;
-    
+
 
     &:hover {
         background-color: grey;
     }
 }
+
+/* section contact*/
+.section__form {
+   display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    width: 100%;
+    
+}
+.container__formulario {
+    width: 50%;
+    background-color: #d8581d;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+}
+form {
+    margin: 20px;
+}
+.form-label {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+input {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 /*footer*/
 #icono-footer {
