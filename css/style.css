@@ -106,6 +106,10 @@ footer {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(#ffffff), to(#ffffff));
   background-image: linear-gradient(#ffffff, #ffffff, #ffffff);
   padding: 15px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-link {

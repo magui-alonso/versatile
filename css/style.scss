@@ -96,6 +96,9 @@ footer {
 .navbar {
     background-image: linear-gradient(#ffffff, #ffffff, #ffffff);
     padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .nav-link {
