@@ -1,4 +1,6 @@
-//Entrega proyecto final
+//Desafio 8
+
+
 
 const productosVersatile = [{
         id: 1,
@@ -43,6 +45,7 @@ const productosVersatile = [{
 
 ]
 
+
 productosVersatile.forEach((producto) => {
     console.log(producto)
 })
@@ -61,5 +64,18 @@ agregarAlCarrito(2)
 
 console.log(carrito)
 
+
 console.log(carrito.reduce((acc, el) => acc + el.precio, 0))
 
+
+// desafio DOM
+
+let mensajeBienvenida = document.getElementById("mensajeBienvenida")
+
+let provincia = prompt("Ingresa tu provincia para ver descuentos")
+
+if (provincia === "mendoza") {
+    mensajeBienvenida.innerHTML = "Aprovecha el envio gratis y 20% de descuento en toda la tienda"
+} else {
+    mensajeBienvenida.innerHTML = "Disculpa, en este momento no hay promociones en tu zona"
+}
