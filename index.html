@@ -95,25 +95,25 @@
             <span class="visually-hidden">Next</span>
         </a>
     </div>
+    <section>
+        <div class="contenedor-titulo-productos">
+            <h4 class="titulo-productos">Bikers y mas</h4>
+        </div>
 
-    <div class="contenedor-titulo-productos">
-        <h4 class="titulo-productos">Bikers y mas</h4>
-    </div>
-
-    <div class="selector-modelo">
-        <!--selector de modelos-->
-        <h5>Elegí tu modelo</h5>
-        <select id="selecModelo">
-            <option value="all">Todos</option>
-            <option value="Byker Lycra">Byker Lycra</option>
-            <option value="Byker Saten">Byker Saten</option>
-            <option value="Byker Tornasolada">Byker Tornasolada</option>
-        </select>
-    </div>
+        <div class="selector-modelo">
+            <!--selector de modelos-->
+            <h5>Elegí tu modelo</h5>
+            <select id="selecModelo">
+                <option value="all">Todos</option>
+                <option value="Byker Lycra">Byker Lycra</option>
+                <option value="Byker Saten">Byker Saten</option>
+                <option value="Byker Tornasolada">Byker Tornasolada</option>
+            </select>
+        </div>
 
 
-    <main id="contenedor-productos">
-        <!--<div class="producto">
+        <main id="contenedor-productos">
+            <!-- <div class="producto">
                 <div class="contenedor-img">
                     <img src="multimedia/productos/biker-lycra.jpeg" class="card-img-top" alt="imagen-producto">
                 </div>
@@ -122,48 +122,52 @@
                 <p class="card-text">Talle: L</p>
                 <p class="precioProducto">Precio: $1200</p>
                 <button class="boton-agregar"><i class="fas fa-cart-plus"></i></button>
-            </div> -->
-    </main>
+            </div>  -->
+        </main>
 
-    <div class="modal-contenedor">
-        <div class="modal-carrito">
-            <h3>Carrito</h3>
-            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-            <div id="carrito-contenedor">
-                <!-- <div class="productoEnCarrito">
-                        <p>Buzo 1</p>
+        <div class="modal-contenedor">
+            <div class="modal-carrito">
+                <h3>Carrito</h3>
+                <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                <div id="carrito-contenedor">
+                    <!-- <div class="productoEnCarrito">
+                        <img class="imagenProdCarrito" src="multimedia/productos/biker-lycra.jpeg"
+                            alt="imagen-producto">
+                        <p>Nombre producto</p>
+                        <p>Color</p>
                         <p>Precio: $1200</p>
                         <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
                     </div> -->
+                </div>
+                <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
             </div>
-            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
         </div>
-    </div>
 
-    <!-- formulario de contacto -->
-    <a name="contacto"></a>
-    <section class="section__form">
-        <div class="container__formulario">
-            <form action="envia.php" method="post" class="containerForm col-9 ">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
-                    <input type="name" class="form-control" id="exampleFormControlInput1"
-                        placeholder="nombre y apellido" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="email@example.com" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Dejanos tu consulta</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <input class="label-form" id="botonEnviar" type="submit" value="Enviar">
-            </form>
-        </div>
+        <!-- formulario de contacto -->
+        <h2 class="texto-form">Contactanos</h2>
+        <a name="contacto"></a>
+        <section class="section__form">
+            <div class="container__formulario">
+                <form action="envia.php" method="post" class="containerForm col-9 ">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput1"
+                            placeholder="nombre y apellido" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="email@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Dejanos tu consulta</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <input class="label-form" id="botonEnviar" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
     </section>
-
     <footer>
         <div class="social-footer">
             <span id="icono-footer"><span class="iconify" data-icon="brandico-instagram-filled"
@@ -174,9 +178,7 @@
         </div>
         <div class="menu-footer ">
             <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="carrito.html">Carrito</a>
             <a class="nav-link" href="#contacto">Contacto</a>
-
         </div>
         <h6 class="copyright">VERSATILE © 2021</h6>
     </footer>
@@ -188,8 +190,8 @@
 
 
     <!--Javascript-->
-    <script defer src="stock.js"></script>
-    <script defer src="modal.js"></script>
+    <script src="stock.js"></script>
+    <script src="modal.js"></script>
     <script src="app.js"></script>
 
     <!--Boostrap-->
