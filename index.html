@@ -26,15 +26,16 @@
         </div>
 
         <div class="logo-iconos">
-            <div class="social">
+            <div class="social-1">
                 <iconify-icon class="social-icon" data-icon="carbon:logo-instagram"></iconify-icon>
+                <iconify-icon class="social-icon" data-icon="la:facebook-square"></iconify-icon>
+            </div>
+            <a href="index.html"><img class="logo" src="multimedia/versatile.png" alt="logo-versatile"></a>
+            <div class="social-2">
                 <iconify-icon class="social-icon" data-icon="bx:bxl-whatsapp"></iconify-icon>
                 <iconify-icon class="social-icon" data-icon="ic:outline-email"></iconify-icon>
             </div>
 
-            <a href="index.html"><img class="logo" src="multimedia/versatile.png" alt="logo-versatile"></a>
-
-            <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
 
         </div>
     </header>
@@ -50,6 +51,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav ">
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="#carrito">Carrito</a>
                     <a class="nav-link" href="#contacto">Contacto</a>
                 </div>
             </div>
@@ -95,6 +97,10 @@
             <span class="visually-hidden">Next</span>
         </a>
     </div>
+
+
+
+
     <section>
         <div class="contenedor-titulo-productos">
             <h4 class="titulo-productos">Bikers y mas</h4>
@@ -111,7 +117,11 @@
             </select>
         </div>
 
-
+        <div class="elegir-productos">
+            <h4>Agregar productos a tu carrito</h4>
+            <a href="#carrito"><button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span
+                    id="contadorCarrito">0</span></button></a>
+        </div>
         <main id="contenedor-productos">
             <!-- <div class="producto">
                 <div class="contenedor-img">
@@ -125,23 +135,33 @@
             </div>  -->
         </main>
 
-        <div class="modal-contenedor">
-            <div class="modal-carrito">
-                <h3>Carrito</h3>
-                <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-                <div id="carrito-contenedor">
-                    <!-- <div class="productoEnCarrito">
-                        <img class="imagenProdCarrito" src="multimedia/productos/biker-lycra.jpeg"
-                            alt="imagen-producto">
+        <a name="carrito"></a>
+        <section class="compra">
+
+            <h3>Termina tu compra</h3>
+            <div id="carrito-contenedor">
+                <!--<div class="productoEnCarrito">
+                    <img class="imagenProdCarrito" src="multimedia/productos/biker-lycra.jpeg" alt="imagen-producto">
+                    <div class="textoProdCarrito">
                         <p>Nombre producto</p>
                         <p>Color</p>
+                    </div>
+                    <div class="textoProdCarrito">
+                         <div class="cantidad">
+                            <p class="number-text">Cantidad:</p>
+                            <input class="number" type="number" min="1" max="10" >
+                        </div> 
                         <p>Precio: $1200</p>
-                        <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                    </div> -->
-                </div>
-                <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+                    </div>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div>-->
             </div>
-        </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+            <button class="boton-pagar">Pagar</button>
+        </section>
+
+
+
 
         <!-- formulario de contacto -->
         <a name="contacto"></a>
@@ -188,12 +208,10 @@
 
 
 
-
-    <!--Javascript-->
-    <script src="stock.js"></script>
-    <script src="modal.js"></script>
-    <script src="app.js"></script>
-
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <!--Boostrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
@@ -201,6 +219,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
     </script>
+    <!--Javascript-->
+
+
+    <script src="stock.js"></script>
+    <script src="modal.js"></script>
+    <script src="app.js"></script>
+
+
+
 
 </body>
 

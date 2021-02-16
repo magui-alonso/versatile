@@ -7,10 +7,10 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
 
 const selecModelo = document.getElementById('selecModelo')
+
 selecModelo.addEventListener('change', ()=>{
     console.log(selecModelo.value)
     
-
     if (selecModelo.value == "all") {
         mostrarProductos(stockProductos)
     } else {
@@ -21,7 +21,7 @@ selecModelo.addEventListener('change', ()=>{
 
 
 mostrarProductos(stockProductos)
-
+revisarLocal()
 function mostrarProductos(array) {
     contenedorProductos.innerHTML = ''
     array.forEach((productoNuevo) => {
@@ -51,7 +51,7 @@ function agregarAlCarrito(id) {
 
     let productoAgregar = stockProductos.filter((el) => el.id == id)[0]
     carritoDeCompras.push(productoAgregar)
-    console.log(carritoDeCompras)
+    localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
     actualizarCarrito()
 
     let div = document.createElement('div')
@@ -62,7 +62,13 @@ function agregarAlCarrito(id) {
             <p>${productoAgregar.modelo}</p>
             <p>Color ${productoAgregar.color}</p>
         </div>
-        <p>Precio: $${productoAgregar.precio}</p>
+        <div class="textoProdCarrito">
+            <div class="cantidad">
+                <p class="number-text">Cantidad:</p>
+                <input class="number" type="number" min="1" max="10">
+            </div>
+            <p>Precio: $${productoAgregar.precio}</p>
+        </div>
         <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
     `
     contenedorCarrito.appendChild(div)
@@ -71,6 +77,7 @@ function agregarAlCarrito(id) {
     botonEliminar.addEventListener('click', () => {
         botonEliminar.parentElement.remove()
         carritoDeCompras = carritoDeCompras.filter((el) => el.id != productoAgregar.id)
+        localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))    
         actualizarCarrito()
     })
 }
@@ -78,4 +85,12 @@ function agregarAlCarrito(id) {
 function actualizarCarrito() {
     contadorCarrito.innerText = carritoDeCompras.length
     precioTotal.innerText = carritoDeCompras.reduce((acc, el) => acc + el.precio, 0)
+}
+function revisarLocal() {
+    let carritoLocal = JSON.parse(localStorage.getItem('carritoDeCompras'))
+    if (carritoLocal) {
+        carritoLocal.forEach((el)=>{
+            agregarAlCarrito(el.id)
+        })
+    }
 }
