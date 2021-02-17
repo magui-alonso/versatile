@@ -49,37 +49,65 @@ function mostrarProductos(array) {
 
 function agregarAlCarrito(id) {
 
-    let productoAgregar = stockProductos.filter((el) => el.id == id)[0]
-    carritoDeCompras.push(productoAgregar)
-    localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
-    actualizarCarrito()
+    let productoAgregar = stockProductos.find((el) => el.id == id)
 
-    let div = document.createElement('div')
-    div.classList.add('productoEnCarrito')
-    div.innerHTML = `
-        <img class="imagenProdCarrito" src=${productoAgregar.img} alt="imagen-producto">
-        <div class="textoProdCarrito">
-            <p>${productoAgregar.modelo}</p>
-            <p>Color ${productoAgregar.color}</p>
-        </div>
-        <div class="textoProdCarrito">
-            <div class="cantidad">
-                <p class="number-text">Cantidad:</p>
-                <input class="number" type="number" min="1" max="10">
-            </div>
-            <p>Precio: $${productoAgregar.precio}</p>
-        </div>
-        <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-    `
-    contenedorCarrito.appendChild(div)
-    let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
+    let productoEnCarrito = document.getElementById(id)
+    if (productoEnCarrito) {
+        let inputCantidad = document.getElementById(`cantidadProducto${id}`)
+        let cambiarValor = new Event('change')
+        inputCantidad.value = `${Number.parseInt(inputCantidad.value) + 1}`
+        inputCantidad.dispatchEvent(cambiarValor)
 
-    botonEliminar.addEventListener('click', () => {
-        botonEliminar.parentElement.remove()
-        carritoDeCompras = carritoDeCompras.filter((el) => el.id != productoAgregar.id)
-        localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))    
+    } else {
+        carritoDeCompras.push(productoAgregar)
+        localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
         actualizarCarrito()
-    })
+        let div = document.createElement('div')
+        div.id = id
+        div.classList.add('productoEnCarrito')
+        div.innerHTML = `
+            <img class="imagenProdCarrito" src=${productoAgregar.img} alt="imagen-producto">
+            <div class="textoProdCarrito">
+                <p>${productoAgregar.modelo}</p>
+                <p>Color ${productoAgregar.color}</p>
+            </div>
+            <div class="textoProdCarrito">
+                <div class="cantidad">
+                    <p class="number-text">Cantidad:</p>
+                    <input id="cantidadProducto${id}" class="number" type="number" min="1" max="10" value="1">
+                </div>
+                <p>Precio: $${productoAgregar.precio}</p>
+            </div>
+            <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        `
+        contenedorCarrito.appendChild(div)
+        let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
+        let inputCantidad = document.getElementById(`cantidadProducto${id}`)
+
+        function eliminar() {
+            botonEliminar.parentElement.remove()
+            carritoDeCompras = carritoDeCompras.filter((el) => el.id != productoAgregar.id)
+            localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
+            actualizarCarrito()
+        }
+        let cantidadValorAnterior = Number.parseInt(inputCantidad.value)
+        inputCantidad.addEventListener('change', (e) => {
+            let cantidadNuevoValor = Number.parseInt(e.target.value)
+            if (cantidadNuevoValor >= cantidadValorAnterior) {
+                carritoDeCompras.push(productoAgregar)
+                localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
+                actualizarCarrito()
+            } else {
+                let posicionProducto = carritoDeCompras.find(producto => producto.id === id)
+                carritoDeCompras.splice(posicionProducto, 1)
+                localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
+                actualizarCarrito()
+            }
+            cantidadValorAnterior = cantidadNuevoValor
+        })
+    
+        botonEliminar.addEventListener('click', eliminar)
+    }
 }
 
 function actualizarCarrito() {
@@ -94,3 +122,5 @@ function revisarLocal() {
         })
     }
 }
+
+// $("#h6-footer").hide
