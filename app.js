@@ -6,18 +6,18 @@ const contenedorCarrito = document.getElementById('carrito-contenedor')
 const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
 
-const selecModelo = document.getElementById('selecModelo')
+// const selecModelo = document.getElementById('selecModelo')
 
-selecModelo.addEventListener('change', () => {
-    console.log(selecModelo.value)
+// selecModelo.addEventListener('change', () => {
+//     console.log(selecModelo.value)
 
-    if (selecModelo.value == "all") {
-        mostrarProductos(stockProductos)
-    } else {
-        mostrarProductos(stockProductos.filter((el) => el.modelo == selecModelo.value))
-    }
+//     if (selecModelo.value == "all") {
+//         mostrarProductos(stockProductos)
+//     } else {
+//         mostrarProductos(stockProductos.filter((el) => el.modelo == selecModelo.value))
+//     }
 
-})
+// })
 
 
 mostrarProductos(stockProductos)
@@ -81,7 +81,7 @@ function agregarAlCarrito(id) {
                 </div>
                 <p>Precio: $${productoAgregar.precio}</p>
             </div>
-            <button id="eliminar${productoAgregar.id}"data-id=${productoAgregar.id} class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+            <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
             
         `
         contenedorCarrito.appendChild(div)
