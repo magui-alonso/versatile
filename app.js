@@ -36,8 +36,9 @@ function mostrarProductos(array) {
                     <p class="card-text">Color ${productoNuevo.color}</p>
                     <p class="card-text">Talle: ${productoNuevo.talle}</p>
                     <p class="precioProducto">Precio: $${productoNuevo.precio}</p>
-                    <button id="boton${productoNuevo.id}" class="boton-agregar"><i class="fas fa-cart-plus"></i></button>
+                    <button id="boton${productoNuevo.id}"data-id=${productoNuevo.id} class="boton-agregar"><i class="fas fa-cart-plus"></i></button>
                     <p id="texto${productoNuevo.id}" class="texto">Producto agregado al carrito.</p>
+                    
         `
         contenedorProductos.appendChild(div)
         let boton = document.getElementById(`boton${productoNuevo.id}`)
@@ -80,7 +81,7 @@ function agregarAlCarrito(id) {
                 </div>
                 <p>Precio: $${productoAgregar.precio}</p>
             </div>
-            <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+            <button id="eliminar${productoAgregar.id}"data-id=${productoAgregar.id} class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
             
         `
         contenedorCarrito.appendChild(div)
@@ -137,7 +138,11 @@ $('#btn-seguirCompra').click(function (e) {
 });
 
 
-$("#boton2").click(function () {
-    $("#texto2").fadeIn(2000,);
-
+$(".boton-agregar").click(function () {
+    var id = $(this).attr("data-id");
+    $("#texto" + id).fadeIn(500);
+    $("#texto" + id).fadeOut(3000);
 });
+
+
+
