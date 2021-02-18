@@ -37,17 +37,17 @@ function mostrarProductos(array) {
                     <p class="card-text">Talle: ${productoNuevo.talle}</p>
                     <p class="precioProducto">Precio: $${productoNuevo.precio}</p>
                     <button id="boton${productoNuevo.id}" class="boton-agregar"><i class="fas fa-cart-plus"></i></button>
-                    <p class="texto">Producto agregado al carrito.</p>
+                    <p id="texto${productoNuevo.id}" class="texto">Producto agregado al carrito.</p>
         `
         contenedorProductos.appendChild(div)
         let boton = document.getElementById(`boton${productoNuevo.id}`)
-
 
         boton.addEventListener('click', () => {
             agregarAlCarrito(productoNuevo.id)
         })
     })
 }
+
 
 function agregarAlCarrito(id) {
 
@@ -136,6 +136,8 @@ $('#btn-seguirCompra').click(function (e) {
     }, 500);
 });
 
-$(".boton-agregar.id").click(function () {
-    $("p.texto").fadeIn(2000,);
+
+$("#boton2").click(function () {
+    $("#texto2").fadeIn(2000,);
+
 });
