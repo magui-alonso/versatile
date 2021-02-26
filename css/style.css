@@ -83,6 +83,7 @@ h5 {
 }
 
 .c {
+  background-color: #dfdfdf;
   color: #252426;
   font-weight: 500;
 }
@@ -753,6 +754,7 @@ footer .iconify:hover {
     font-weight: 500;
   }
   .c {
+    background-color: #dfdfdf;
     color: #252426;
     font-weight: 500;
   }
