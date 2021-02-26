@@ -58,7 +58,7 @@
                 <img class="slide-desktop" src="multimedia/slide/slide-3-3.png" class="d-block w-100" alt="...">
                 <img class="slide-mobile" src="multimedia/slide/footer-3.jpg" class="d-block w-100" alt="...">
             </div>
-            
+
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -77,7 +77,7 @@
             <h5 class="h5-img">BYKER LYCRA</h5>
 
         </div>
-        
+
         <div class="contenedor__img--producto">
             <img class="img-prod" src="multimedia/saten.png" alt="">
             <h6 class="h6-img">MODELO</h6>
@@ -146,7 +146,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="btn-seguirCompra" class="boton" data-bs-dismiss="modal">SEGUIR COMPRANDO</button>
+                        <button type="button" id="btn-seguirCompra" class="boton" data-bs-dismiss="modal">SEGUIR
+                            COMPRANDO</button>
                         <button type="button" class="boton">PAGAR</button>
                     </div>
                 </div>
@@ -171,27 +172,32 @@
         <div class="contenedor-titulo-productos">
             <h4 class="titulo-productos">CONTACTANOS</h4>
         </div>
+
         <section class="section__form">
-            <div class="container__formulario">
-                <form action="envia.php" method="post" class="containerForm col-9 ">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput1"
-                            placeholder="nombre y apellido" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="email@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Dejanos tu consulta</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <input class="label-form" id="botonEnviar" type="submit" value="Enviar">
-                </form>
-            </div>
+            <form id="formulario" class="formulario container__formulario">
+                <h6>Envianos tu mensaje por WhatsApp</h6>
+                <div class="box-input">
+                    <label for="nombre" class="form-label">Nombre y Apellido</label>
+                    <input name="nombre" id="nombre" type="text" required>
+                    <span data-placeholder="Escriba su Nombre"></span>
+                </div>
+
+                <div class="box-input">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email" id="email" type="email" required>
+                    <span data-placeholder="Escriba su Correo Electrónico"></span>
+                </div>
+                <div class="box-input">
+                    <label for="mensaje" class="form-label">Deja tu mensaje</label>
+                    <input name="mensaje" id="dejarMensaje" type="text" required>
+                    <span data-placeholder="Deja tu mensaje"></span>
+                </div>
+
+                <button id="submit" type="submit" class="boton-form"><i class="fab fa-whatsapp"></i> Enviar WhatsApp</button>
+            </form>
         </section>
+
+       
     </section>
 
 
@@ -205,11 +211,12 @@
             <img class="img-footer" src="multimedia/slide/footer-3.jpg" alt="">
         </div>
         <div class="social-footer">
-            <span id="icono-footer"><a href="https://www.instagram.com/versati.le/?hl=es-la"><span class="iconify" data-icon="brandico-instagram-filled"
-                    data-inline="false"></span></a></span>
-            <span id="icono-footer"><a href="https://api.whatsapp.com/send?phone=+5492615632685"><span class="iconify" data-icon="bx-bxl-whatsapp" data-inline="false"></span></a></span>
+            <span id="icono-footer"><a href="https://www.instagram.com/versati.le/?hl=es-la"><span class="iconify"
+                        data-icon="brandico-instagram-filled" data-inline="false"></span></a></span>
+            <span id="icono-footer"><a href="https://api.whatsapp.com/send?phone=+5492615632685"><span class="iconify"
+                        data-icon="bx-bxl-whatsapp" data-inline="false"></span></a></span>
             <span id="icono-footer"><a href=""><span class="iconify" data-icon="ic-baseline-alternate-email"
-                    data-inline="false"></span></a></span>
+                        data-inline="false"></span></a></span>
         </div>
         <div class="menu-footer ">
             <a class="nav-link" href="index.html">Home</a>
@@ -238,6 +245,7 @@
 
 
     <script src="stock.js"></script>
+    <script src="form.js"></script>
     <script src="app.js"></script>
 
 

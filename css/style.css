@@ -545,47 +545,35 @@ section {
   height: 30px;
 }
 
-/* section contact*/
-.texto-form {
-  margin-top: 10px;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.section__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
+/*formulario*/
 .container__formulario {
-  width: 50%;
+  width: 500px;
   background-color: #dfdfdf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
-  margin: 50px;
+  margin: 30px 20px 30px 20px;
+  padding: 20px;
 }
 
-form {
-  margin: 20px;
+.formulario h5 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #252426;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .form-label {
@@ -594,27 +582,46 @@ form {
   font-weight: 400;
 }
 
-input {
-  font-family: 'Montserrat', sans-serif;
+.box-input {
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 10px 0;
+  width: 250px;
 }
 
-#botonEnviar {
-  background-color: #ffffff;
-  color: #3a3a3a;
-  font-weight: 600;
-  width: 100px;
+.box-input input {
+  font-size: 16px;
+  color: #252426;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 20px;
+}
+
+.boton-form {
+  display: block;
+  width: 200px;
   height: 40px;
-  border: #ffffff;
-  -webkit-box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-#botonEnviar:hover {
-  color: black;
+  background-color: #48bb78;
+  border: solid 2px #48bb78;
+  color: #fff;
+  border-radius: 5px;
   font-weight: 600;
+  font-size: 15px;
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-/*carrito*/
+.boton:hover {
+  background-color: #2F855A;
+  border: solid 2px #2F855A;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 /*footer*/
 .contenedor__img--footer {
   display: -webkit-box;
@@ -716,7 +723,7 @@ footer .iconify:hover {
     background-color: #efefef;
     color: #252426;
     font-weight: 500;
-    width: 80px;
+    width: 50px;
   }
   .slide-desktop {
     display: none;
@@ -742,6 +749,9 @@ footer .iconify:hover {
   }
   .container__formulario {
     width: 80%;
+  }
+  .box-input {
+    width: 200px;
   }
   .imagenProdCarrito {
     width: 80px;

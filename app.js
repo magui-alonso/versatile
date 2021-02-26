@@ -112,7 +112,9 @@ function revisarLocal() {
             agregarAlCarrito(el.id)
         })
     }
+    
 }
+
 
 
 $('#btn-seguirCompra').click(function (e) {
