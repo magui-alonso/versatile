@@ -69,7 +69,7 @@ h5 {
 }
 
 .c {
-    background-color: #dfdfdf;
+    
     color: #252426;
     font-weight: 500;
 }
@@ -513,29 +513,29 @@ input {
 }
 
 /*carrito*/
-.section__carrito {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
+// .section__carrito {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     width: 100%;
+// }
 
-.carrito {
-    width: 50%;
-    height: 200px;
-    background-color: #d8581d;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
-    margin: 50px;
-}
+// .carrito {
+//     width: 50%;
+//     height: 200px;
+//     background-color: #d8581d;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 5px;
+//     box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+//     margin: 50px;
+// }
 
-.texto--carrito {
-    color: #ffffff;
-}
+// .texto--carrito {
+//     color: #ffffff;
+// }
 
 /*footer*/
 
@@ -621,7 +621,7 @@ footer .iconify {
         font-weight: 500;
     }
     .c {
-        background-color: #dfdfdf;
+        
         color: #252426;
         font-weight: 500;
         width: 80px;

@@ -7,7 +7,6 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
 
 
-
 mostrarProductos(stockProductos)
 revisarLocal()
 

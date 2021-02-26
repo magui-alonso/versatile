@@ -83,7 +83,6 @@ h5 {
 }
 
 .c {
-  background-color: #dfdfdf;
   color: #252426;
   font-weight: 500;
 }
@@ -615,47 +614,6 @@ input {
 }
 
 /*carrito*/
-.section__carrito {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.carrito {
-  width: 50%;
-  height: 200px;
-  background-color: #d8581d;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 5px;
-  -webkit-box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
-  margin: 50px;
-}
-
-.texto--carrito {
-  color: #ffffff;
-}
-
 /*footer*/
 .contenedor__img--footer {
   display: -webkit-box;
@@ -754,7 +712,6 @@ footer .iconify:hover {
     font-weight: 500;
   }
   .c {
-    background-color: #dfdfdf;
     color: #252426;
     font-weight: 500;
     width: 80px;
