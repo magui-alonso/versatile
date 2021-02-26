@@ -757,6 +757,7 @@ footer .iconify:hover {
     background-color: #dfdfdf;
     color: #252426;
     font-weight: 500;
+    width: 80px;
   }
   .slide-desktop {
     display: none;
