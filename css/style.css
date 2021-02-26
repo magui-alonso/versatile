@@ -586,7 +586,7 @@ section {
   border-bottom: 2px solid #adadad;
   position: relative;
   margin: 10px 0;
-  width: 95%;
+  width: 250px;
 }
 
 .box-input input {
@@ -751,7 +751,7 @@ footer .iconify:hover {
     width: 90%;
   }
   .box-input {
-    width: 200px;
+    width: 95%;
   }
   .imagenProdCarrito {
     width: 80px;
