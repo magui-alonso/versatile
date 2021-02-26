@@ -1,14 +1,3 @@
-// AJAX - fetch
-
-let stockProductos = []
-
-fetch('stock.json').then((res) => {
-    res.json().then((data) =>{
-        stockProductos = data
-})})  
-
-
-
 let carritoDeCompras = []
 
 const contenedorProductos = document.getElementById('contenedor-productos')
@@ -18,11 +7,7 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
 
 
-
 mostrarProductos(stockProductos)
-
-
-
 revisarLocal()
 
 function mostrarProductos(array) {
@@ -127,8 +112,9 @@ function revisarLocal() {
             agregarAlCarrito(el.id)
         })
     }
-
+    
 }
+
 
 
 
@@ -154,3 +140,6 @@ $('.boton-desc').click(function (e) {
         scrollTop: $(".titulo-productos").offset().top
     }, 500);
 });
+
+
+
