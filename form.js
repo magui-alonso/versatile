@@ -23,7 +23,7 @@ formulario.addEventListener('submit', (event) => {
         let nombre = document.querySelector('#nombre').value
         let email = document.querySelector('#email').value
         let dejarMensaje = document.querySelector('#dejarMensaje').value
-        let mensaje = 'send?phone=' + telefono + '&text=GRACIAS POR COMUNICARTE CON VERSATILE %0ANombre y apellido:%0A' + nombre + '%0AEmail: %0A' + email + '%0AMensaje %0A' + dejarMensaje + ''
+        let mensaje = 'send?phone=' + telefono + '&text=GRACIAS POR COMUNICARTE CON VERSATILE %0ANombre y apellido:%0A' + nombre + '%0AEmail: %0A' + email + '%0AMensaje: %0A' + dejarMensaje + ''
         if(isMobile()) {
             window.open(urlMobile + mensaje, '_blank')
         }else{
