@@ -6,18 +6,6 @@ const contenedorCarrito = document.getElementById('carrito-contenedor')
 const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
 
-// const selecModelo = document.getElementById('selecModelo')
-
-// selecModelo.addEventListener('change', () => {
-//     console.log(selecModelo.value)
-
-//     if (selecModelo.value == "all") {
-//         mostrarProductos(stockProductos)
-//     } else {
-//         mostrarProductos(stockProductos.filter((el) => el.modelo == selecModelo.value))
-//     }
-
-// })
 
 
 mostrarProductos(stockProductos)
@@ -34,7 +22,6 @@ function mostrarProductos(array) {
                     </div> 
                     <h5 class="card-title">${productoNuevo.modelo}</h5>
                     <p class="card-text">Color ${productoNuevo.color}</p>
-                    <p class="card-text">Talle: ${productoNuevo.talle}</p>
                     <p class="precioProducto">Precio: $${productoNuevo.precio}</p>
                     <button id="boton${productoNuevo.id}"data-id=${productoNuevo.id} class="boton-agregar"><i class="fas fa-cart-plus"></i></button>
                     <p id="texto${productoNuevo.id}" class="texto">Producto agregado al carrito.</p>
@@ -142,6 +129,14 @@ $(".boton-agregar").click(function () {
     var id = $(this).attr("data-id");
     $("#texto" + id).fadeIn(500);
     $("#texto" + id).fadeOut(3000);
+});
+
+$('.boton-desc').click(function (e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $(".titulo-productos").offset().top
+    }, 500);
 });
 
 
