@@ -768,6 +768,9 @@ section {
     font-size: 10px;
     font-weight: 500;
   }
+  #modal-login {
+    height: 40px;
+  }
   .c {
     background-color: #efefef;
     color: #252426;
