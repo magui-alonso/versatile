@@ -8,6 +8,8 @@
     padding: 0;
 }
 
+
+
 body {
     margin: 30px;
     background-color: #dfdfdf;
@@ -163,14 +165,11 @@ section {
 }
 
 .contenedor-titulo-productos {
-
     margin-top: 30px;
     border-bottom: #252426 solid 2px;
 }
 
 .titulo-productos {
-    // background-color: #252426;
-
     padding: 5px;
     text-align: center;
     width: 100%;
@@ -587,6 +586,32 @@ footer .iconify {
         background-color: #ffffff;
     }
 }
+.mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+#map {
+    width: 640px; 
+    height: 250px;
+    margin-bottom: 20px;
+    
+}
+.contenedor-titulo-mapa {
+    margin: 30px;
+    border-bottom: #ffffff solid 2px;
+}
+.titulo-mapa {
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
 
 
 // Media Query
@@ -711,6 +736,13 @@ footer .iconify {
         width: 100px;
         height: 60px;
         margin: 5px;
+    }
+    #map {
+        width: 90%; 
+        height: 200px;
+    }
+    .titulo-mapa {
+        font-size: 12px;
     }
 
 }

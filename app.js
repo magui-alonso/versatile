@@ -1,4 +1,3 @@
-
 let carritoDeCompras = []
 
 const contenedorProductos = document.getElementById('contenedor-productos')
@@ -113,12 +112,10 @@ function revisarLocal() {
             agregarAlCarrito(el.id)
         })
     }
-    
+
 }
 
-
-
-
+// Animaciones
 $('#btn-seguirCompra').click(function (e) {
     e.preventDefault();
 
@@ -130,8 +127,8 @@ $('#btn-seguirCompra').click(function (e) {
 
 $(".boton-agregar").click(function () {
     var id = $(this).attr("data-id");
-    $("#texto" + id).fadeIn(500);
-    $("#texto" + id).fadeOut(3000);
+    $("#texto" + id).fadeIn(2000);
+    $("#texto" + id).fadeOut(2000);
 });
 
 $('.boton-desc').click(function (e) {
@@ -142,5 +139,15 @@ $('.boton-desc').click(function (e) {
     }, 500);
 });
 
+// API mapa
 
+var map = L.map('map').setView([-32.98024, -68.87876], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var marker = L.marker([-32.98024, -68.87876]).addTo(map)
+    .bindPopup('<b>¡Hola! Somos VERSATILE</b><br>Encontranos aquí.')
+    .openPopup();
 

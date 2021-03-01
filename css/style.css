@@ -704,6 +704,43 @@ footer .iconify:hover {
   background-color: #ffffff;
 }
 
+.mapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#map {
+  width: 640px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.contenedor-titulo-mapa {
+  margin: 30px;
+  border-bottom: #ffffff solid 2px;
+}
+
+.titulo-mapa {
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
 @media (min-width: 768px) {
   .slide-mobile {
     display: none;
@@ -804,6 +841,13 @@ footer .iconify:hover {
     width: 100px;
     height: 60px;
     margin: 5px;
+  }
+  #map {
+    width: 90%;
+    height: 200px;
+  }
+  .titulo-mapa {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */
