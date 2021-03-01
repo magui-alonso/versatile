@@ -53,6 +53,7 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: #ffffff solid 5px;
 }
 
 .menu-nav {
@@ -74,18 +75,31 @@ h5 {
 .nav-link {
   margin: 0 15px 0 15px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
+  padding: 5px;
 }
 
 .nav-link:hover {
   color: grey;
+  border-bottom: #ffffff solid 2px;
+}
+
+#modal-login {
+  height: 40px;
 }
 
 .c {
-  background-color: #efefef;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  padding: 10px;
   color: #252426;
   font-weight: 500;
+  text-decoration: none;
+}
+
+.c:hover {
+  color: grey;
 }
 
 #modal-login {
@@ -123,7 +137,8 @@ footer {
 .carousel-inner > .carousel-item > img {
   height: 400px;
   width: 100%;
-  border: solid 5px #ffffff;
+  border-right: solid 5px #ffffff;
+  border-left: solid 5px #ffffff;
 }
 
 .contenedor__img {
@@ -687,21 +702,18 @@ section {
   margin: 20px 20px 20px 20px;
 }
 
-footer .iconify {
-  width: 40px;
-  height: 40px;
-  background-color: #dfdfdf;
-  font-size: 30px;
-  padding: 5px;
-  margin: 15px;
-  color: #4c4b4d;
+.redes {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
   -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
-footer .iconify:hover {
-  color: grey;
-  background-color: #ffffff;
+.redes:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .mapa {
@@ -755,12 +767,6 @@ footer .iconify:hover {
     margin: 0 10px 0 10px;
     font-size: 10px;
     font-weight: 500;
-  }
-  .c {
-    background-color: #efefef;
-    color: #252426;
-    font-weight: 500;
-    width: 65px;
   }
   .slide-desktop {
     display: none;
