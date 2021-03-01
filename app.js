@@ -148,6 +148,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var marker = L.marker([-32.98024, -68.87876]).addTo(map)
-    .bindPopup('<b>¡Hola! Somos VERSATILE</b><br>Encontranos aquí.')
+    .bindPopup('<b>¡Hola! Somos VERSATILE</b><br>Encontranos acá.')
     .openPopup();
 
