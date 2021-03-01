@@ -1,3 +1,12 @@
+// AJAX - fetch
+
+let stockProductos = []
+
+fetch('stock.json').then((res) => {
+    res.json().then((data) =>{
+        stockProductos = data
+})})
+
 let carritoDeCompras = []
 
 const contenedorProductos = document.getElementById('contenedor-productos')
