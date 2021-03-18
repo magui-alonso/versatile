@@ -6,6 +6,8 @@ const contenedorCarrito = document.getElementById('carrito-contenedor')
 const contadorCarrito = document.getElementById('contadorCarrito')
 const precioTotal = document.getElementById('precioTotal')
 
+const agregarProductoForm = document.getElementById('contenedor-productos-form')
+
 
 mostrarProductos(stockProductos)
 revisarLocal()
@@ -71,6 +73,7 @@ function agregarAlCarrito(id) {
             
         `
         contenedorCarrito.appendChild(div)
+
         let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
         let inputCantidad = document.getElementById(`cantidadProducto${id}`)
 
@@ -115,6 +118,7 @@ function revisarLocal() {
 
 }
 
+
 // Animaciones
 $('#btn-seguirCompra').click(function (e) {
     e.preventDefault();
@@ -139,6 +143,14 @@ $('.boton-desc').click(function (e) {
     }, 500);
 });
 
+
+
+
+
+
+
+
+
 // API mapa
 
 var map = L.map('map').setView([-32.98024, -68.87876], 13);
@@ -150,4 +162,3 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var marker = L.marker([-32.98024, -68.87876]).addTo(map)
     .bindPopup('<b>¡Hola! Somos VERSATILE</b><br>Encontranos acá.')
     .openPopup();
-
